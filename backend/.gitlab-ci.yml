@@ -23,6 +23,8 @@ create-image:
 
 tag-image:
   stage: build
+  needs:
+    - create-image
   image:
     name: gcr.io/go-containerregistry/crane:debug
     entrypoint: [ "" ]
