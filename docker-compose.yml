@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  backend:
+    build: backend
+    container_name: backend
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/health"]
+      interval: 5s
+      timeout: 5s
+      start_period: 5s
+      retries: 5
+    networks:
+      - mamo_network
+  frontend:
+    build: frontend
+    container_name: frontend
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - mamo_network
+
+networks:
+  mamo_network:
