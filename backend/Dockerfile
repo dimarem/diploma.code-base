@@ -9,7 +9,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o /build/main ./cmd/api
 
 FROM alpine:3.19
 WORKDIR /app
-RUN addgroup --system backend && adduser -S -s /bin/false -G backend backend -D
+RUN addgroup -r backend && adduser -S -s /bin/false -G backend backend -D
 COPY --from=builder --chown=backend:backend /build/main ./
 USER backend
 EXPOSE 8081
