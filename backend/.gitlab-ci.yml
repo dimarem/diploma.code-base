@@ -71,4 +71,9 @@ upload-to-nexus:
     - build-app
   script:
     - cd backend
-    - ls -la
+    - tar czvf momo-store-${VERSION}.tar.gz main
+    - >
+     curl -v -u "${NEXUS_REPO_USER}:${NEXUS_REPO_PASS}"
+     --upload-file momo-store-${VERSION}.tar.gz
+     ${NEXUS_REPO_URL}/repository/${NEXUS_REPO_BACKEND_NAME}/${VERSION}/momo-store-${VERSION}.tar.gz
+  allow_failure: true
