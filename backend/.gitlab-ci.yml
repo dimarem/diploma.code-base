@@ -19,10 +19,10 @@ sonarqube-test:
     - cd backend
     - >
       sonar-scanner
-        -Dsonar.projectKey="${SONAR_PROJECT_KEY_BACK}"
-        -Dsonar.sources=.
-        -Dsonar.host.url="${SONARQUBE_URL}"
-        -Dsonar.login="${SONAR_LOGIN_BACK}"
+      -Dsonar.projectKey="${SONAR_PROJECT_KEY_BACK}"
+      -Dsonar.sources=.
+      -Dsonar.host.url="${SONARQUBE_URL}"
+      -Dsonar.login="${SONAR_LOGIN_BACK}"
 
 build-image:
   stage: build
