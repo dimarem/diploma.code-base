@@ -10,6 +10,5 @@ RUN npm run build
 FROM nginx:stable-alpine3.19
 WORKDIR /app
 COPY default.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /build/dist/ .
-USER nginx
+COPY --from=builder --chown=nginx:nginx /build/dist/ ./
 EXPOSE 80
