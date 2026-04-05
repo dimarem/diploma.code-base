@@ -28,9 +28,9 @@ trigger_helm_pipeline:
     project: std-046-13/momo-store-infra
     branch: master
     strategy: depend
-    variables:
-      BACKEND_IMAGE: $CI_REGISTRY_IMAGE/backend:$CI_COMMIT_SHA
-      FRONTEND_IMAGE: $CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHA
+  variables:
+    BACKEND_IMAGE: $CI_REGISTRY_IMAGE/backend:$CI_COMMIT_SHA
+    FRONTEND_IMAGE: $CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHA
   only:
     changes:
       - frontend/**/*
