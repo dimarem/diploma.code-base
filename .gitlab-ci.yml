@@ -31,6 +31,7 @@ trigger_helm_pipeline:
   variables:
     BACKEND_IMAGE: $CI_REGISTRY_IMAGE/backend:$CI_COMMIT_SHA
     FRONTEND_IMAGE: $CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHA
+    VERSION: 1.0.${CI_PIPELINE_ID}
   only:
     changes:
       - frontend/**/*
