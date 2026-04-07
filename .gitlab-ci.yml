@@ -22,7 +22,20 @@ backend:
     changes:
       - backend/**/*
 
-trigger_helm_pipeline:
+trigger_frontend:
+  stage: infra-pipelines
+  trigger:
+    project: std-046-13/momo-store-infra
+    branch: master
+    strategy: depend
+  variables:
+    FRONTEND_IMAGE: $CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHA
+    VERSION: 1.0.${CI_PIPELINE_ID}
+  only:
+    changes:
+      - frontend/**/*
+
+trigger_backend:
   stage: infra-pipelines
   trigger:
     project: std-046-13/momo-store-infra
@@ -30,10 +43,8 @@ trigger_helm_pipeline:
     strategy: depend
   variables:
     BACKEND_IMAGE: $CI_REGISTRY_IMAGE/backend:$CI_COMMIT_SHA
-    FRONTEND_IMAGE: $CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHA
     VERSION: 1.0.${CI_PIPELINE_ID}
   only:
     changes:
-      - frontend/**/*
       - backend/**/*
   
