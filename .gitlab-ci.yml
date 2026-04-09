@@ -22,6 +22,7 @@ backend:
     changes:
       - backend/**/*
 
+# тригерим пайплайн в инфраструктурном репозитории
 trigger_frontend:
   stage: infra-pipelines
   trigger:
@@ -35,6 +36,7 @@ trigger_frontend:
     changes:
       - frontend/**/*
 
+# тригерим пайплайн в инфраструктурном репозитории
 trigger_backend:
   stage: infra-pipelines
   trigger:
