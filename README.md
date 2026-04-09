@@ -18,6 +18,9 @@
 - ArgoCD
 - Helm
 - Terraform
+- Prometheus
+- Grafana
+- Loki
 - CLI Yandex
 - Ресурсы облачной платформы Yandex
 
