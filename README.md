@@ -2,6 +2,13 @@
 
 <img width="900" alt="image" src="https://storage.yandexcloud.net/diploma-image-bucket/landing.png">
 
+## Развертывание приложения
+
+Состоит из двух этапов:
+
+1. Подготовка и публикация артефактов сборки и helm-чартов в текущем проекте.
+2. Запуск пайплайна в инфраструктурном репозиторий.
+
 ## Ссылки на ресурсы
 
 - [Momo Store](https://momostore-std-046-13.ru/)
