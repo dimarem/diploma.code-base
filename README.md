@@ -24,12 +24,6 @@
 - CLI Yandex
 - Ресурсы облачной платформы Yandex
 
-Приложение запущено под управлением Kubernetes на одном узле с 4 CPU и 8 ГБ RAM.
-
-Для поддержки HTTPS используется [Yandex Certificate Manager](https://yandex.cloud/ru/docs/certificate-manager/).
-
-Для хранения и раздачи статики используется [Yandex Object Storage](https://yandex.cloud/ru/docs/storage/).
-
 Больше подробносте в инфраструктурном репозитории.
 
 ## Чек-лист задания
