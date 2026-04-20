@@ -1,7 +1,5 @@
 # Дипломная работа: Momo Store aka Пельменная №2
 
-<img width="900" alt="image" src="https://storage.yandexcloud.net/diploma-image-bucket/landing.png">
-
 ## Развертывание приложения
 
 Состоит из двух этапов:
@@ -12,7 +10,7 @@
 ## Ссылки на ресурсы
 
 - [Momo Store](https://momostore-std-046-13.ru/)
-- [Инфраструктурный репозиторий](https://gitlab.praktikum-services.ru/std-046-13/momo-store-infra)
+- [Инфраструктурный репозиторий](https://github.com/dimarem/diploma.infra)
 - [Репозиторий артефактов сборки для frontend](https://nexus.praktikum-services.tech/#browse/browse:std-046-13-diploma-front)
 - [Репозиторий артефактов сборки для backend](https://nexus.praktikum-services.tech/#browse/browse:std-046-13-diploma-back)
 - [Репозиторий helm-чартов для frontend](https://nexus.praktikum-services.tech/#browse/browse:std-046-13-diploma-helm-front)
